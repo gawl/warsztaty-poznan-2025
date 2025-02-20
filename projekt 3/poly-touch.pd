@@ -1,0 +1,13 @@
+#N canvas 622 403 450 300 12;
+#X obj 71 39 r fromGUI;
+#X obj 71 63 list trim;
+#X obj 71 88 route /myMultiTouch;
+#X obj 71 112 route touch;
+#X obj 71 170 dac~;
+#X obj 71 136 clone ws-synth 4;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 5 0 4 0;
+#X connect 5 0 4 1;
