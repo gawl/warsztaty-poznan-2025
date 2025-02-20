@@ -1,5 +1,5 @@
-#N canvas 779 243 365 226 12;
-#N canvas 1286 157 345 372 mmp-cntrl 0;
+#N canvas 529 69 405 348 12;
+#N canvas 836 84 627 756 mmp-cntrl 0;
 #X obj 47 30 r fromSystem;
 #X obj 47 54 list trim;
 #X obj 47 78 route /tilts;
@@ -13,15 +13,16 @@
 #X obj 47 174 + 40;
 #X obj 47 198 mtof;
 #X floatatom 47 222 5 0 0 0 - - - 0;
-#X msg 191 103 \$1 50;
-#X obj 191 127 line~;
-#X obj 191 155 s~ on;
+#X msg 192 123 \$1 50;
+#X obj 192 147 line~;
+#X obj 192 175 s~ on;
 #X msg 114 151 \$1 50;
 #X obj 114 175 line~;
 #X obj 114 202 s~ vol;
 #X obj 47 298 s~ pitch;
 #X msg 47 247 \$1 50;
 #X obj 47 271 line~;
+#X obj 192 100 * 0.3;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -31,7 +32,7 @@
 #X connect 5 0 16 0;
 #X connect 6 0 8 0;
 #X connect 7 0 6 0;
-#X connect 8 0 13 0;
+#X connect 8 0 22 0;
 #X connect 9 0 10 0;
 #X connect 10 0 11 0;
 #X connect 11 0 12 0;
@@ -42,8 +43,9 @@
 #X connect 17 0 18 0;
 #X connect 20 0 21 0;
 #X connect 21 0 19 0;
+#X connect 22 0 13 0;
 #X restore 34 26 pd mmp-cntrl;
-#N canvas 254 234 450 300 synth 0;
+#N canvas 159 78 703 550 synth 0;
 #X obj 178 73 r~ on;
 #X obj 117 73 r~ vol;
 #X obj 46 73 r~ pitch;
@@ -60,7 +62,7 @@
 #X connect 5 0 4 0;
 #X connect 6 0 7 0;
 #X restore 34 56 pd synth;
-#N canvas 179 204 450 300 rev-out 0;
+#N canvas 179 204 502 430 rev-out 0;
 #X obj 77 45 inlet~;
 #X obj 77 152 dac~;
 #X obj 110 120 rev1~;
